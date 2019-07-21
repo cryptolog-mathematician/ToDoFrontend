@@ -1,0 +1,10 @@
+<div>
+    <div>
+        <ul>
+            <li *ngFor = "let toDO of toDos">
+                {{toDO.description}}
+            </li>
+        </ul>
+    </div>
+    <button routerLink = "/createNewToDo">Add New ToDo</button>
+</div>
