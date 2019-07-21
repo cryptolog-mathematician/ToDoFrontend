@@ -16,7 +16,7 @@
                 <tr *ngFor = "let toDO of toDos">
                     <td>{{toDO.description}}</td>
                     <td>
-                        <button (click) = "updateToDo()">Update</button>
+                        <button routerLink ="/updateToDo/{{toDO.id}}">Update</button>
                     </td>
                     <td>
                         <button (click) = "deleteToDo(toDO)">Delete</button>

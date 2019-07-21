@@ -1,0 +1,17 @@
+<div>
+    <div>
+        <table>
+            <form>           
+                <tr>
+                    <th>
+                        To Do
+                    </th>
+                    <td>
+                        <input type="text" [(ngModel)]="toDo.description" name="description" placeholder="description"/>
+                    </td>
+                </tr>
+                <button type="submit" (click) = "updateToDo()" >Update</button>
+            </form>
+        </table>
+    </div>
+</div>

@@ -23,8 +23,24 @@ export class ToDoService {
     return this.http.get<any>(this.toDoUrl);
   }
 
+  getToDo(id: number): Observable< any > {
+    const url =  `${this.toDoUrl}/${id}`;
+    return this.http.get <any > (url)
+    .pipe(
+      retry(3)
+    );
+  }
+
   postToDo(todo: any): Observable<any> {
     return this.http.post<any>(this.toDoUrl, todo, httpOptions )
+    .pipe(
+      retry(3)
+    );
+  }
+
+  putToDo(todo: any): Observable<any> {
+    const url = `${this.toDoUrl}/${todo.id}`;
+    return this.http.put<any>(url, todo, httpOptions)
     .pipe(
       retry(3)
     );
