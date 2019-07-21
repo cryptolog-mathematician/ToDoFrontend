@@ -1,10 +1,29 @@
 <div>
     <div>
-        <ul>
-            <li *ngFor = "let toDO of toDos">
-                {{toDO.description}}
-            </li>
-        </ul>
+        <table>
+            <thead>
+                <td>
+                    To Dos
+                </td>
+                <td>
+                    Update
+                </td>
+                <td>
+                    Delete
+                </td>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let toDO of toDos">
+                    <td>{{toDO.description}}</td>
+                    <td>
+                        <button (click) = "updateToDo()">Update</button>
+                    </td>
+                    <td>
+                        <button (click) = "deleteToDo(toDO)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button routerLink = "/createNewToDo">Add New ToDo</button>
     </div>
-    <button routerLink = "/createNewToDo">Add New ToDo</button>
 </div>

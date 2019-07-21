@@ -29,4 +29,9 @@ export class ToDoService {
       retry(3)
     );
   }
+
+  deleteToDo(id: number): Observable<any> {
+    const url = `${this.toDoUrl}/${id}`;
+    return this.http.delete(url);
+  }
 }

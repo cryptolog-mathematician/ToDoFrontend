@@ -22,5 +22,11 @@ export class ToDoComponent implements OnInit {
     .subscribe(todos => this.toDos = todos);
   }
 
+  deleteToDo(todo: any): void {
+    this.toDoService.deleteToDo(todo.id).subscribe(
+      this.toDos = this.toDos.filter(tod => tod !== todo)
+    );
+  }
+
 
 }
