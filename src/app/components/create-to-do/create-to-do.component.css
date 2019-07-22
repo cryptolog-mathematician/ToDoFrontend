@@ -1,0 +1,17 @@
+mat-card{
+    width: 40%;
+    margin: auto;
+}
+table{
+    width: 100%;
+}
+td:first{
+    width: 70%;
+}
+form{
+    width: 100%;
+}
+input{
+    width: 90%;
+    height: 25px;
+}

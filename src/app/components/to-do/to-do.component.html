@@ -1,29 +1,36 @@
 <div>
-    <div>
-        <table>
-            <thead>
-                <td>
-                    To Dos
-                </td>
-                <td>
-                    Update
-                </td>
-                <td>
-                    Delete
-                </td>
-            </thead>
-            <tbody>
-                <tr *ngFor = "let toDO of toDos">
-                    <td>{{toDO.description}}</td>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>To Dos</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <table>
+                <thead>
                     <td>
-                        <button routerLink ="/updateToDo/{{toDO.id}}">Update</button>
+                        To Do
                     </td>
                     <td>
-                        <button (click) = "deleteToDo(toDO)">Delete</button>
+                        Update
                     </td>
-                </tr>
-            </tbody>
-        </table>
-        <button routerLink = "/createNewToDo">Add New ToDo</button>
-    </div>
+                    <td>
+                        Delete
+                    </td>
+                </thead>
+                <tbody>
+                    <tr  *ngFor = "let toDO of toDos">
+                        <td class="description">{{toDO.description}}</td>
+                        <td>
+                            <button mat-stroked-button color="primary" routerLink ="/updateToDo/{{toDO.id}}">Update</button>                        
+                        </td>
+                        <td>
+                            <button mat-stroked-button color="warn" (click) = "deleteToDo(toDO)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" routerLink = "/createNewToDo">Add New</button>
+        </mat-card-actions>        
+    </mat-card>
 </div>

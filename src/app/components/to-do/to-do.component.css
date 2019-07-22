@@ -1,0 +1,14 @@
+mat-card{
+    width: 40%;
+    margin: auto;
+}
+table{
+    width: 100%;
+    text-align: center;
+}
+thead{
+    text-align: center;
+}
+.description{
+    text-align: left
+}
