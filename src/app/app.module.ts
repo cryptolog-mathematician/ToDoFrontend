@@ -6,6 +6,8 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 
+import {MatInputModule} from '@angular/material/input';
+
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +32,7 @@ import { UpdateToDoComponent } from './components/update-to-do/update-to-do.comp
     MatButtonModule, MatCheckboxModule,
     MatCardModule,
     MatTableModule,
+    MatInputModule,
     HttpClientModule
   ],
   providers: [],

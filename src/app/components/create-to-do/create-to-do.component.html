@@ -1,7 +1,7 @@
     <div>
         <mat-card>
             <mat-card-header>
-                <mat-card-title>Add to dos</mat-card-title>
+                <mat-card-title>Add to do</mat-card-title>
             </mat-card-header>
             <mat-card-content>
                 <form [formGroup]="toDoForm" (ngSubmit)="onSubmit()">
@@ -9,15 +9,26 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <input type="text" formControlName="description" required>
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Description" formControlName="description"  [errorStateMatcher]="matcher">
+
+                                        <mat-error *ngIf="validation.hasError('required')">
+                                            Description is <strong>required</strong>
+                                        </mat-error>
+                                    </mat-form-field>
                                 </td>
                                 <td>
-                                    <button mat-raised-button color="primary" type="submit" >Submit</button>
+                                    <button mat-raised-button color="primary" type="submit" *ngIf="!validation.hasError('required')" >Submit</button>
                                 </td>
                             </tr>
+                            <div *ngIf = "submitted && require.description.errors">
+                                <div *ngIf = "require.description.errors.required">
+                                    description is required !!!
+                                </div>
+                            </div>
                         </tbody>
                     </table>
-                </form>
+                </form>  
             </mat-card-content>    
         </mat-card>
     </div>

@@ -2,6 +2,9 @@ mat-card{
     width: 40%;
     margin: auto;
 }
+mat-card-actions{
+    margin-right: 22px;
+}
 table{
     width: 100%;
     text-align: center;
