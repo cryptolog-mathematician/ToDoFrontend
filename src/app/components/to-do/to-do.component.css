@@ -1,17 +1,14 @@
-mat-card{
-    width: 40%;
-    margin: auto;
-}
-mat-card-actions{
-    margin-right: 22px;
-}
 table{
     width: 100%;
-    text-align: center;
+    border: 1px solid rgb(35, 10, 146);
 }
-thead{
-    text-align: center;
+button{
+    margin-top: 5px;
 }
-.description{
-    text-align: left
+.actions{
+    text-align: end;
 }
+
+.example-margin {
+    margin: 0 10px;
+  }

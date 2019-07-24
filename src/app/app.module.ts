@@ -5,6 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
 
 import {MatInputModule} from '@angular/material/input';
 
@@ -33,6 +34,7 @@ import { UpdateToDoComponent } from './components/update-to-do/update-to-do.comp
     MatCardModule,
     MatTableModule,
     MatInputModule,
+    MatIconModule,
     HttpClientModule
   ],
   providers: [],
