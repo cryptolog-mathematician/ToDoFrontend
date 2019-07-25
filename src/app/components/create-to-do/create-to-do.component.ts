@@ -4,6 +4,7 @@ import { FormBuilder, Validators, FormControl, FormGroupDirective, NgForm } from
 import { Location } from '@angular/common';
 
 import {ErrorStateMatcher} from '@angular/material/core';
+import { ToDo } from 'src/app/models/toDo';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -42,9 +43,9 @@ export class CreateToDoComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.toDo.description = this.toDoForm.get(['description']).value;
-    this.toDoService.postToDo(this.toDo)
-    .subscribe(() => this.goBack());
+    const description = this.toDoForm.get('description').value;
+    this.toDoService.postToDo(new ToDo(new Date().getTime(), description))
+                    .subscribe(() => this.goBack());
   }
 
   goBack(): void {
